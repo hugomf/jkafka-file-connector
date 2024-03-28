@@ -1,0 +1,8 @@
+{
+  "name": "filepsink-connector",
+  "config": {
+    "connector.class": "com.petco.jkafka.connector.sink.FileSinkConnector",
+    "filename": "/connectors/file.txt",
+    "topic": "TEST_TOPIC"
+  }
+}

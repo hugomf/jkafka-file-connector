@@ -1,0 +1,46 @@
+
+
+
+plugins {
+    id 'java'
+   // id 'application'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+// group 'com.petco.jkafka.kafka-connect'
+// version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    // maven {
+    //     url "http://packages.confluent.io/maven/"
+    // }
+}
+
+// application {
+//     mainClassName = 'com.petco.jkafka.source.connector.FileSinkConnector'
+// }
+
+dependencies {
+    // Kafka Connect API dependency
+    implementation 'org.slf4j:slf4j-api:1.7.25'
+    implementation 'org.apache.kafka:kafka-clients:2.8.0'
+    implementation 'org.apache.kafka:connect-api:2.8.0'
+
+    // Add any other dependencies your connector needs here
+}
+
+// build uber JAR using shadow plugin (http://imperceptiblethoughts.com/shadow)
+shadowJar {
+   // archiveFileName = 'connect-filesink.jar' 
+    dependencies {
+        // exclude dependencies provided in the kafka connect classpath
+        exclude dependency("org.apache.kafka:connect-api:2.8.0")
+        exclude dependency("org.apache.kafka:kafka-clients:2.8.0")
+        exclude dependency('net.jpountz.lz4:.*:.*')
+        exclude dependency('org.xerial.snappy:.*:.*')
+        exclude dependency('org.slf4j:.*:.*')
+    }
+}
