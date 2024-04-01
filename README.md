@@ -1,4 +1,6 @@
-# jkafka-file-connector
+# Apache Kafka File Connector
+
+This Example will show how can to create a Kafka connector using docker compose
 
 
 

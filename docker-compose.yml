@@ -38,17 +38,7 @@ services:
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 
-  # kafdrop:
-  #   image: ghcr.io/arm64-compat/kafdrop:3.31.0-snapshot-amd64
-  #   # image: obsidiandynamics/kafdrop
-  #   restart: "no"
-  #   environment:
-  #     KAFKA_BROKERCONNECT: "kafka:9092"
-  #     JVM_OPTS: "-Xms16M -Xmx512M -Xss180K -XX:-TieredCompilation -XX:+UseStringDeduplication -noverify"
-  #   ports:
-  #     - 9000:9000
-  #   depends_on:
-  #     - kafka
+
   
   kafka-connect:
     image: confluentinc/cp-kafka-connect:latest
@@ -94,6 +84,18 @@ services:
   #   # until the zookeeper and kafka services are up before attempting to start Schema Registry.
   #   depends_on:
   #     - zookeeper
+  #     - kafka
+
+    # kafdrop:
+  #   image: ghcr.io/arm64-compat/kafdrop:3.31.0-snapshot-amd64
+  #   # image: obsidiandynamics/kafdrop
+  #   restart: "no"
+  #   environment:
+  #     KAFKA_BROKERCONNECT: "kafka:9092"
+  #     JVM_OPTS: "-Xms16M -Xmx512M -Xss180K -XX:-TieredCompilation -XX:+UseStringDeduplication -noverify"
+  #   ports:
+  #     - 9000:9000
+  #   depends_on:
   #     - kafka
 
   kafka-ui:
