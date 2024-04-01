@@ -1,29 +1,63 @@
 # Apache Kafka File Connector
 
-This Example will show how can to create a Kafka connector using docker compose
+This Example will show how can to create a Kafka connector and test it with docker compose
+
+
+
+## Architecture
+
+![alt text](images/arch-connector.png)
+
+## Components
+
+* FileSinkConnector
+* FileSourceConnector
+* MessageConsumer
+* MessageProducer
 
 
 ## Compile (build the jar file)
 
 ```
-     ./gradlew clean shadowJar
+./gradlew clean shadowJar
 ```
+
+## Run docker composer
+
+```
+docker compose up -d
+```
+
+Verify all the containers are running by typing
+```
+docker ps --format "table {{.Names}}\t{{.Status}}"  
+```
+
+All containers should be in `Up` status
+```
+NAMES                               STATUS
+file-connect                        Up About a minute (healthy)
+kafka-ui                            Up About a minute
+jkafka-file-connector-kafka-1       Up About a minute
+jkafka-file-connector-zookeeper-1   Up About a minute
+```
+
 
 ## Verify the Plugin connector is loaded 
 
 ```
- curl localhost:8083/connector-plugins | jq  
+curl localhost:8083/connector-plugins | jq  
 ```
 
 If the Connector is properly loaded you will get the following output
 
 ![alt text](images/list-connector-plugins.png)
 
-As you can see we will able to se both: *FileSinkConnector* and *FileSouceConnector*
+As you can see we will able to see both: `FileSinkConnector` and `FileSouceConnector`, MirrorConnectors are **builtin** Apache Kafka connectors.
 
 
 > [!NOTE]  
-> If you are getting `curl: (56) Recv failure: Connection reset by peer` your kafka connector might not be ready yet, wait few more minutes
+> If you are getting `curl: (56) Recv failure: Connection reset by peer` your kafka connector might not be ready yet, wait few more minutes and try again !!!
 
 
 ## Create the topic
