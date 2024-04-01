@@ -3,14 +3,11 @@
 This Example will show how can to create a Kafka connector using docker compose
 
 
-
 ## Compile (build the jar file)
 
 ```
      ./gradlew clean shadowJar
 ```
-
-
 
 ## Verify the Plugin connector is loaded 
 
