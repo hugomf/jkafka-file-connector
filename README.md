@@ -29,7 +29,6 @@ As you can see we will able to se both: *FileSinkConnector* and *FileSouceConnec
 
 
 * verify if the connector is installed:
-
 ```
  curl -sS localhost:8083/connectors | jq
 ```
@@ -64,6 +63,7 @@ docker exec file-connect tail -f /connectors/file.txt
 Then open another shell window and run the `com.petco.jkafka.connector.MessageProducer.java` as follows:
 
 ```
+./gradlew runProducer
 ```
 
 > [!NOTE]  
