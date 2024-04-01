@@ -1,6 +1,6 @@
 # Apache Kafka File Connector
 
-This Example will show how can to create a Kafka connector and test it with docker compose
+This Example will show how to create a Kafka connector and test it with docker compose
 
 
 
