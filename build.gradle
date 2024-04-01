@@ -44,3 +44,13 @@ shadowJar {
         exclude dependency('org.slf4j:.*:.*')
     }
 }
+
+task runProducer(type: JavaExec) {
+    main = 'com.petco.jkafka.MessageProducer' // Replace with the fully qualified name of your main class
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+task runConsumer(type: JavaExec) {
+    main = 'com.petco.jkafka.MessageConsumer' // Replace with the fully qualified name of your main class
+    classpath = sourceSets.main.runtimeClasspath
+}

@@ -3,6 +3,6 @@
   "config": {
     "connector.class": "com.petco.jkafka.connector.sink.FileSinkConnector",
     "filename": "/connectors/file.txt",
-    "topic": "TEST_TOPIC"
+    "topics": "TEST_TOPIC"
   }
 }
