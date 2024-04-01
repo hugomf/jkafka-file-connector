@@ -10,11 +10,12 @@ This Example will show how can to create a Kafka connector and test it with dock
 
 ## Components
 
-* FileSinkConnector
-* FileSourceConnector
-* MessageConsumer
-* MessageProducer
-
+| Component            | Description                                                                                       |
+|----------------------|---------------------------------------------------------------------------------------------------|
+| FileSinkConnector    | This Connector will read the topic and will append the file with the topic contents (Consumer)   |
+| FileSourceConnector  | This Connector will read the file and push the contents to the Kafka Topic (Producer)            |
+| MessageConsumer      | Consume the message from the topic and display the information in the console                    |
+| MessageProducer      | It will generate messages and push each message to the topic.                                    |
 
 ## Compile (build the jar file)
 
