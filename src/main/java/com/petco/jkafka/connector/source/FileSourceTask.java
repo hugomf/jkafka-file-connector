@@ -1,4 +1,4 @@
-package com.petco.jkafka.connector.source;
+package com.azteckoder.jkafka.connector.source;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

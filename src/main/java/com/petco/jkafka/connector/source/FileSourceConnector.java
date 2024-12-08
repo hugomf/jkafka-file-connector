@@ -1,4 +1,4 @@
-package com.petco.jkafka.connector.source;
+package com.azteckoder.jkafka.connector.source;
 
 import java.util.ArrayList;
 import java.util.HashMap;

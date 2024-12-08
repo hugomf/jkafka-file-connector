@@ -8,28 +8,28 @@
             "type": "java",
             "name": "MessageProducer",
             "request": "launch",
-            "mainClass": "com.petco.jkafka.MessageProducer",
+            "mainClass": "com.azteckoder.jkafka.MessageProducer",
             "projectName": "jkafka-prod"
         },
         {
             "type": "java",
             "name": "MessageConsumer",
             "request": "launch",
-            "mainClass": "com.petco.jkafka.MessageConsumer",
+            "mainClass": "com.azteckoder.jkafka.MessageConsumer",
             "projectName": ""
         },
         {
             "type": "java",
             "name": "MessageConsumer",
             "request": "launch",
-            "mainClass": "com.petco.jkafka.MessageConsumer",
+            "mainClass": "com.azteckoder.jkafka.MessageConsumer",
             "projectName": "app"
         },
         {
             "type": "java",
             "name": "MessageProducer",
             "request": "launch",
-            "mainClass": "com.petco.jkafka.MessageProducer",
+            "mainClass": "com.azteckoder.jkafka.MessageProducer",
             "projectName": "app"
         },
         {

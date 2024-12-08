@@ -1,4 +1,4 @@
-package com.petco.jkafka.connector.sink;
+package com.azteckoder.jkafka.connector.sink;
 
 import org.apache.kafka.connect.sink.SinkRecord;
 import org.apache.kafka.connect.sink.SinkTask;

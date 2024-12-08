@@ -1,7 +1,7 @@
 {
   "name": "filesource-connector",
   "config": {
-    "connector.class": "com.petco.jkafka.connector.source.FileSourceConnector",
+    "connector.class": "com.azteckoder.jkafka.connector.source.FileSourceConnector",
     "filename": "/connectors/file.txt",
     "topic": "TEST_TOPIC"
   }

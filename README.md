@@ -110,7 +110,7 @@ In order to see what messages are being consumed, you can display the contents o
 ```
 docker exec file-connect tail -f /connectors/file.txt 
 ```
-To produce test messages, open another shell window and run the `com.petco.jkafka.connector.MessageProducer.java` as follows:
+To produce test messages, open another shell window and run the `com.azteckoder.jkafka.connector.MessageProducer.java` as follows:
 
 ```
 ./gradlew runProducer

@@ -4,7 +4,7 @@ plugins {
     id 'com.github.johnrengelman.shadow' version '8.1.1'
 }
 
-// group 'com.petco.jkafka.kafka-connect'
+// group 'com.azteckoder.jkafka.kafka-connect'
 // version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
@@ -36,11 +36,11 @@ shadowJar {
 }
 
 task runProducer(type: JavaExec) {
-    main = 'com.petco.jkafka.MessageProducer'
+    main = 'com.azteckoder.jkafka.MessageProducer'
     classpath = sourceSets.main.runtimeClasspath
 }
 
 task runConsumer(type: JavaExec) {
-    main = 'com.petco.jkafka.MessageConsumer' 
+    main = 'com.azteckoder.jkafka.MessageConsumer' 
     classpath = sourceSets.main.runtimeClasspath
 }
